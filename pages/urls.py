@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import HomePageView, AboutPageView, ProductIndexView, ProductShowView, ProductCreateView, ContactPageView, ProductSuccessView, CartView, CartRemoveAllView, ImageViewFactory
+from .views import *
 from .utils import ImageLocalStorage
 
 ImageView = ImageViewFactory(ImageLocalStorage())
@@ -18,4 +18,6 @@ urlpatterns = [
     path('cart/removeAll', CartRemoveAllView.as_view(), name='cart_removeAll'),
     path('image/', ImageView.as_view(), name='image_index'),
     path('image/save', ImageView.as_view(), name='image_save'),
+    path('imagenotdi/', ImageViewNoDI.as_view(), name='imagenodi_index'),
+    path('image/save', ImageViewNoDI.as_view(), name='imagenodi_save'),
 ]
