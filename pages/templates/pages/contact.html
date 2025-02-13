@@ -1,0 +1,20 @@
+{% extends 'pages/base.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block header_title %} {{subtitle}} {% endblock %}
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <p class="card-text"><strong>Phone:</strong> +{{countryCode}} {{phone}}</p>
+                    <p class="card-text"><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></p>
+                    <p class="card-text"><strong>Address:</strong> {{address}}</p>
+                    <p class="card-text"><strong>Birthday:</strong> {{birthday}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
